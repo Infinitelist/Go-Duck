@@ -1,0 +1,198 @@
+/* Rutherford Labbe - 12/28/2023 */
+
+/* --------------------------------------- Section Divider ---------------------------------------- */
+
+/* Affects entire page */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --Sazerac: #FFF5E0;
+    --FruitSalad: #4c9d47;
+    --Koromiko: #ffbb5c;
+    --Mustard: #ffd552;
+}
+
+/* --------------------------------------- Section Divider ---------------------------------------- */
+
+#title_video{
+    /* Centers element vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Sets dimension */
+    width: 100%;
+    height: 100%;
+
+    /* Keeps aspect ratio */
+    object-fit: cover;
+
+    /* Top layer */
+    z-index: 2;
+}
+
+#title_video:hover{
+    /* Change the cursor to a pointer */
+    cursor: pointer;
+}
+
+/* --------------------------------------- Section Divider ---------------------------------------- */
+
+#try_again{
+    /* Centers element vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Top layer */
+    z-index: 2;
+
+    /* Set dimensions */
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+    outline: 5px solid var(--Mustard);
+
+    /* Keeps element hidden */
+    display: none;
+}
+
+img{
+    /* Set dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* Keeps aspect ratio */
+    object-fit: cover;
+}
+
+/* --------------------------------------- Section Divider ---------------------------------------- */
+
+#winner_video{
+    /* Centers element vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Sets dimension */
+    width: 100%;
+    height: 100%;
+
+    /* Keeps aspect ratio */
+    object-fit: cover;
+
+    /* Top layer */
+    z-index: 2;
+
+    /* Hides element */
+    display: none;
+
+    border-radius: 20px;
+    outline: 5px solid white;
+}
+
+#winner_video:hover{
+    /* Change the cursor to a pointer */
+    cursor: pointer;
+}
+
+/* --------------------------------------- Section Divider ---------------------------------------- */
+
+body{
+    /* Centers child element vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /*background-color: var(--FruitSalad);*/
+    position: relative;
+}
+
+#content{
+    /* Keeps element hidden */
+    display: none;
+}
+
+main{
+    /* Set dimensions */
+    width: fit-content;
+    height: fit-content;
+
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--Sazerac);
+
+    /* Adds a slight box shadow to element */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    /* Adds smooth transition for scaling */
+    transition: transform 0.5s ease;
+}
+
+/* --------------------------------------- Section Divider ---------------------------------------- */
+
+#box_container{
+    /* 5 rows 10 columns */
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+
+    /* Set dimensions */
+    width: fit-content;
+    height: fit-content;
+
+    /*outline: 3px solid red;*/
+}
+
+.box_item{
+    /* Set dimensions */
+    width: 110px;
+    height: 110px;
+
+    /*outline: 3px solid white;*/
+    background-color: var(--Koromiko);
+
+    /* Align element vertically and horizontally */
+    margin: auto;
+    border-radius: 20px;
+}
+
+.box_item > img {
+    /* Hides element */
+    display: none;
+}
+
+/* --------------------------------------- Section Divider ---------------------------------------- */
+
+@media screen and (min-width: 360px){
+    main{
+        transform: scale(0.3);
+    }
+}
+
+@media screen and (min-width: 760px){
+    main{
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (min-width: 960px){
+    main{
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (min-width: 1300px){
+    main{
+        transform: scale(1);
+    }
+}
+
